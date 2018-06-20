@@ -14,6 +14,12 @@
     background-color: #283b4a;
     border: none;
     margin: 10px 0;
+    width: 100%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 .passage_output:focus {
     outline: none;
