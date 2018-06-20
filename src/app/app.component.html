@@ -72,4 +72,4 @@
   </div>
   <input type="number" class="passage_output" [(ngModel)]="passageNumber" (ngModelChange)="resetDice()"/>
 </div>
-<img class="passage_image" src="/assets/passages/{{passageNumber}}.jpg" alt="">
+<img *ngIf="passageNumber > 0 && passageNumber < 91" class="passage_image" src="/assets/passages/{{passageNumber}}.jpg" alt="passage {{passageNumber}}">
