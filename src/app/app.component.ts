@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  firstNumber: number = 0;
+  secondNumber: number = 0;
+  passageNumber: number = 0;
+
+  public setDice(row, eyes){
+    if(row === 1){
+      this.firstNumber = eyes;
+    } else {
+      this.secondNumber = eyes;
+    }
+    this.passageNumber = this.firstNumber * 10 + this.secondNumber;
+  }
+  public resetDice(){
+    this.firstNumber = 0;
+    this.secondNumber = 0;
+  }
 }

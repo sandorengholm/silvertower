@@ -1,0 +1,97 @@
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.logo {
+    width: 100%;
+}
+.passage_output {
+    text-align: center;
+    font-size: 40px;
+    padding: 10px 0;
+    color: white;
+    background-color: #283b4a;
+    border: none;
+    margin: 10px 0;
+}
+.passage_output:focus {
+    outline: none;
+}
+.passage_image {
+    width: 100%;
+}
+
+.dice_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.dice {
+    position: relative;
+    display: inline-block;
+    background-color: #fffdfc;
+    width: 15%;
+    padding-top: calc(15% - 10px);
+    border-radius: 20%;
+    border: 5px solid #BBBBBB;
+    border-top-color: #CCCCCC;
+    border-right-color: #999999;
+    border-bottom-color: #777777;
+    cursor: pointer;
+}
+.dice.active {
+    box-shadow: 0 0 25px 2px orange;
+}
+.dice:hover {
+    background-color: #EEEEEE;
+}
+.dice:focus {
+    outline: none;
+}
+
+.eye {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 20%;
+    padding-top: 20%;
+    border-radius: 50%;
+}
+.eye.middle-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.eye.middle-left {
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+.eye.middle-right {
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+.eye.top-left {
+    top: 25%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+.eye.top-right {
+    top: 25%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+.eye.bottom-left {
+    top: 75%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+.eye.bottom-right {
+    top: 75%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}

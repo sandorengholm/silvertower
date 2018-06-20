@@ -1,20 +1,75 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="container">
+  <img class="logo" src="/assets/logo.png" alt="logo">
+  <div class="dice_row">
+    <button class="dice" (click)="setDice(1, 1)" [ngClass]="{'active': firstNumber === 1}">
+      <div class="eye middle-center"></div>
+    </button>
+    <button class="dice" (click)="setDice(1, 2)" [ngClass]="{'active': firstNumber === 2}">
+      <div class="eye top-left"></div>
+      <div class="eye bottom-right"></div>
+    </button>
+    <button class="dice" (click)="setDice(1, 3)" [ngClass]="{'active': firstNumber === 3}">
+      <div class="eye top-left"></div>
+      <div class="eye middle-center"></div>
+      <div class="eye bottom-right"></div>
+    </button>
+    <button class="dice" (click)="setDice(1, 4)" [ngClass]="{'active': firstNumber === 4}">
+      <div class="eye top-left"></div>
+      <div class="eye top-right"></div>
+      <div class="eye bottom-left"></div>
+      <div class="eye bottom-right"></div>
+    </button>
+    <button class="dice" (click)="setDice(1, 5)" [ngClass]="{'active': firstNumber === 5}">
+      <div class="eye top-left"></div>
+      <div class="eye top-right"></div>
+      <div class="eye middle-center"></div>
+      <div class="eye bottom-left"></div>
+      <div class="eye bottom-right"></div>
+    </button>
+    <button class="dice" (click)="setDice(1, 6)" [ngClass]="{'active': firstNumber === 6}">
+      <div class="eye top-left"></div>
+      <div class="eye top-right"></div>
+      <div class="eye middle-left"></div>
+      <div class="eye middle-right"></div>
+      <div class="eye bottom-left"></div>
+      <div class="eye bottom-right"></div>
+    </button>
+  </div>
+  <div class="dice_row">
+    <button class="dice" (click)="setDice(2, 1)" [ngClass]="{'active': secondNumber === 1}">
+      <div class="eye middle-center"></div>
+    </button>
+    <button class="dice" (click)="setDice(2, 2)" [ngClass]="{'active': secondNumber === 2}">
+      <div class="eye top-left"></div>
+      <div class="eye bottom-right"></div>
+    </button>
+    <button class="dice" (click)="setDice(2, 3)" [ngClass]="{'active': secondNumber === 3}">
+      <div class="eye top-left"></div>
+      <div class="eye middle-center"></div>
+      <div class="eye bottom-right"></div>
+    </button>
+    <button class="dice" (click)="setDice(2, 4)" [ngClass]="{'active': secondNumber === 4}">
+      <div class="eye top-left"></div>
+      <div class="eye top-right"></div>
+      <div class="eye bottom-left"></div>
+      <div class="eye bottom-right"></div>
+    </button>
+    <button class="dice" (click)="setDice(2, 5)" [ngClass]="{'active': secondNumber === 5}">
+      <div class="eye top-left"></div>
+      <div class="eye top-right"></div>
+      <div class="eye middle-center"></div>
+      <div class="eye bottom-left"></div>
+      <div class="eye bottom-right"></div>
+    </button>
+    <button class="dice" (click)="setDice(2, 6)" [ngClass]="{'active': secondNumber === 6}">
+      <div class="eye top-left"></div>
+      <div class="eye top-right"></div>
+      <div class="eye middle-left"></div>
+      <div class="eye middle-right"></div>
+      <div class="eye bottom-left"></div>
+      <div class="eye bottom-right"></div>
+    </button>
+  </div>
+  <input type="number" class="passage_output" [(ngModel)]="passageNumber" (ngModelChange)="resetDice()"/>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+<img class="passage_image" src="/assets/passages/{{passageNumber}}.jpg" alt="">
