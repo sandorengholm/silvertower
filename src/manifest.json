@@ -1,0 +1,17 @@
+{
+    "name": "Silvertower Adventure Guide",
+    "short_name": "Silvertower",
+    "icons": [
+        {
+            "src": "assets/favicon.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        }
+    ],
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#16212b",
+    "theme_color": "orange"
+}
