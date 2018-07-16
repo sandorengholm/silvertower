@@ -11,14 +11,28 @@ export class AppComponent {
 
   public setDice(row, eyes){
     if(row === 1){
-      this.firstNumber = eyes;
+      if(this.firstNumber === eyes){
+        this.resetFirstDice();
+      } else {
+        this.firstNumber = eyes;
+      }
     } else {
-      this.secondNumber = eyes;
+      if(this.secondNumber === eyes){
+        this.resetSecondDice();
+      } else {
+        this.secondNumber = eyes;
+      }
     }
     this.passageNumber = this.firstNumber * 10 + this.secondNumber;
   }
-  public resetDice(){
+  public resetAllDice(){
+      this.firstNumber = 0;
+      this.secondNumber = 0;
+  }
+  public resetFirstDice(){
     this.firstNumber = 0;
+  }
+  public resetSecondDice(){
     this.secondNumber = 0;
   }
 }

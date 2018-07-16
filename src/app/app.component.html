@@ -1,5 +1,6 @@
 <div class="container">
   <img class="logo" src="/assets/logo.png" alt="logo">
+  <label class="dice_label">First Dice</label>
   <div class="dice_row">
     <button class="dice" (click)="setDice(1, 1)" [ngClass]="{'active': firstNumber === 1}">
       <div class="eye middle-center"></div>
@@ -35,6 +36,7 @@
       <div class="eye bottom-right"></div>
     </button>
   </div>
+  <label class="dice_label">Second Dice</label>
   <div class="dice_row">
     <button class="dice" (click)="setDice(2, 1)" [ngClass]="{'active': secondNumber === 1}">
       <div class="eye middle-center"></div>
@@ -70,6 +72,6 @@
       <div class="eye bottom-right"></div>
     </button>
   </div>
-  <input type="number" class="passage_output" [(ngModel)]="passageNumber" (ngModelChange)="resetDice()"/>
+  <input type="number" class="passage_output" [(ngModel)]="passageNumber" (ngModelChange)="resetAllDice()"/>
 </div>
 <img *ngIf="passageNumber > 0 && passageNumber < 91" class="passage_image" src="/assets/passages/{{passageNumber}}.jpg" alt="passage {{passageNumber}}">
